@@ -1,0 +1,14 @@
+prueba.py
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+env/
+venv/
+ENV/
+*.env
+.vscode/
+*.csv~
+*.csv.bak

@@ -1,8 +1,8 @@
 import numpy as np
 from pandas import read_csv
 import unittest
+from src.metodos import Sistema_Ecuaciones
 
-from src.metodos import Sistema_Ecuaciones  
 class TestCubico(unittest.TestCase):
     def test_poligono_ortogonal(self): 
         datos = read_csv('sistema_ecuaciones.csv')
