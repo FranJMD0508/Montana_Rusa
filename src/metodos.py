@@ -34,3 +34,8 @@ def Polinomio_Ortogonal(x_data, y_data, x_vals):
     plt.legend()
     plt.show()
     return chebyshev(x_vals)
+
+def Sistema_Ecuaciones(a,b):
+    x = np.linalg.solve(a, b)
+    print(x)
+    return x
