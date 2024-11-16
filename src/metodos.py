@@ -23,3 +23,14 @@ def Minimos_Cuadrados(x_data, y_data, x_vals):
     plt.legend()
     plt.show()
     return polinomio(x_vals)
+
+def Polinomio_Ortogonal(x_data, y_data, x_vals):
+    chebyshev = np.polynomial.chebyshev.Chebyshev.fit(x_data, y_data, 5)
+    plt.plot(x_data, y_data, 'o', label='Datos')
+    plt.plot(x_vals, chebyshev(x_vals), label='Polinomio de Chebyshev')
+    plt.title('Polinomio Ortogonal de Chebyshev')
+    plt.xlabel('X')
+    plt.ylabel('Y')
+    plt.legend()
+    plt.show()
+    return chebyshev(x_vals)
