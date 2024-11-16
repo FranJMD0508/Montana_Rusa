@@ -12,3 +12,14 @@ def Trazador_Cubico(x_data, y_data, x_vals):
     plt.legend()
     plt.show()
     return trazado(x_vals)
+
+def Minimos_Cuadrados(x_data, y_data, x_vals):
+    polinomio = np.polynomial.Polynomial.fit(x_data, y_data, 5)
+    plt.plot(x_data, y_data, 'o', label='Datos')
+    plt.plot(x_vals, polinomio(x_vals), label='Polinomio Ajustado')
+    plt.title('Polinomio de Mínimos Cuadrados')
+    plt.xlabel('X')
+    plt.ylabel('Y')
+    plt.legend()
+    plt.show()
+    return polinomio(x_vals)
